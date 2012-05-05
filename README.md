@@ -12,7 +12,7 @@ Example usage (when creating a new heroku app):
     $ ls
     Procfile build.sbt project src
 
-    $ heroku create --stack cedar --buildpack https://vcherkassky@github.com/vcherkassky/heroku-buildpack-scala.git
+    $ heroku create --stack cedar --buildpack https://github.com/vcherkassky/heroku-buildpack-scala.git
 
     $ git push heroku master
     ...
@@ -23,7 +23,7 @@ Example usage (when creating a new heroku app):
     
 Updating already existing app:
 
-    heroku config:add BUILDPACK_URL='https://vcherkassky@github.com/vcherkassky/heroku-buildpack-scala.git'
+    heroku config:add BUILDPACK_URL='https://github.com/vcherkassky/heroku-buildpack-scala.git'
 
 The buildpack will detect your app as Scala if it has the project/build.properties and either .sbt or .scala based build config.  It vendors a version of sbt and your popluated .ivy/cache into your slug.  The .ivy2 directory will be cached between builds to allow for faster build times.
 
