@@ -7,12 +7,12 @@ It uses [sbt](https://github.com/harrah/xsbt/) 0.11.0+.
 Usage
 -----
 
-Example usage:
+Example usage (when creating a new heroku app):
 
     $ ls
     Procfile build.sbt project src
 
-    $ heroku create --stack cedar --buildpack https://github.com/heroku/heroku-buildpack-scala.git
+    $ heroku create --stack cedar --buildpack https://vcherkassky@github.com/vcherkassky/heroku-buildpack-scala.git
 
     $ git push heroku master
     ...
@@ -20,6 +20,10 @@ Example usage:
     -----> Scala app detected
     -----> Building app with sbt
     -----> Running: sbt clean compile stage
+    
+Updating already existing app:
+
+    heroku config:add BUILDPACK_URL='https://vcherkassky@github.com/vcherkassky/heroku-buildpack-scala.git'
 
 The buildpack will detect your app as Scala if it has the project/build.properties and either .sbt or .scala based build config.  It vendors a version of sbt and your popluated .ivy/cache into your slug.  The .ivy2 directory will be cached between builds to allow for faster build times.
 
