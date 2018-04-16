@@ -5,6 +5,8 @@ machine:
     SHUNIT_HOME: /tmp/shunit2-2.1.6
 
 test:
+  packages:
+    - nodejs
   pre:
     - bash etc/ci-setup.sh
   override:
