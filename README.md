@@ -17,7 +17,6 @@ Documentation
 ------------
 
 For more information about using Scala and buildpacks on Heroku, see these articles:
-
 *  [Heroku's Scala Support](https://devcenter.heroku.com/articles/scala-support)
 *  [Play Documentation: Deploying to Heroku](https://playframework.com/documentation/2.3.x/ProductionHeroku)
 *  [Customizing the JDK](https://devcenter.heroku.com/articles/customizing-the-jdk)

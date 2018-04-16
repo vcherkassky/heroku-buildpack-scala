@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
+echo "  ------ hack start ------  "
+echo "Installing Node.js"
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs
+echo "  ------  hack end  ------  "
+
 # fail fast
 set -e
 
